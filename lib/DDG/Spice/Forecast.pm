@@ -15,7 +15,7 @@ code_url "https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/
 
 
 my @triggers = ('forecast', 'forcast', 'weather', 'temp', 'temperature');
-triggers any => @triggers;
+triggers startend => @triggers;
 
 spice to => 'http://forecast.io/ddg?apikey={{ENV{DDG_SPICE_FORECAST_APIKEY}}}&q=$1&callback={{callback}}';
 
@@ -24,17 +24,17 @@ spice to => 'http://forecast.io/ddg?apikey={{ENV{DDG_SPICE_FORECAST_APIKEY}}}&q=
 spice is_cached => 1;
 spice proxy_cache_valid => "200 30m";
 
-my $no_location_qr = qr/fore?cast|report|weather|temp(erature)/;
-my $weather_qr = qr/(?:(?:weather|temp(?:erature|))(?: fore?cast| report| today| tomm?orr?ow| this week|))+/;
+my $no_location_qr = qr/\s+fore?cast|report|weather|temp(erature)\s+/;
+my $weather_qr = qr/\s(?:(?:weather|temp(?:erature|))(?:\sfore?cast|\sreport|\stoday|\stomm?orr?ow|\sthis\sweek|))+/;
 
 handle query_lc => sub {
     my $location = '';
 
     # Capture user defined location if it exists.
-    if (/^(?:what(?:'s| is) the |)$weather_qr(?: in | for | at |)(.*)/) {
+    if (/^(?:what(?:'s|\sis)\sthe\s|)$weather_qr(?:\sin\s|\sfor\s|\sat\s|)(.*)/) {
         $location = $1 unless ($1 =~ $no_location_qr);
 
-    } elsif (/^(.*) $weather_qr/) {
+    } elsif (/^(.*)\s$weather_qr/) {
         $location = $1 unless ($1 =~ $no_location_qr);
     }
 
