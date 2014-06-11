@@ -1,4 +1,4 @@
-function ddg_spice_news(apiResult) {
+function ddg_spice_news( apiResult ) {
     "use strict";
 
     // Words that we have to skip in DDG.isRelevant.
@@ -14,14 +14,14 @@ function ddg_spice_news(apiResult) {
     ];
 
     // Some sources need to be set by us.
-    var setSourceOnStory = function(story) {
-        switch(story.syndicate) {
+    var setSourceOnStory = function ( story ) {
+        switch ( story.syndicate ) {
         case "Topsy":
             story.source = story.author || "Topsy";
             break;
         case "NewsCred":
-            if(story.source) {
-                if(story.author) {
+            if ( story.source ) {
+                if ( story.author ) {
                     story.source = story.source + " by " + story.author;
                 }
             } else {
@@ -33,20 +33,20 @@ function ddg_spice_news(apiResult) {
 
     // Check if the title is relevant to the query.
     var goodStories = [];
-    for(var i = 0, story; story = apiResult[i]; i++) {
-	// strip bold from story titles.
-        story.title = story.title.replace(/<b>|<\/b>|:/g, "");
-        if(DDG.isRelevant(story.title, skip)) {
-            setSourceOnStory(story);
-            goodStories.push(story);
+    for ( var i = 0, story; story = apiResult[ i ]; i++ ) {
+        // strip bold from story titles.
+        story.title = story.title.replace( /<b>|<\/b>|:/g, "" );
+        if ( DDG.isRelevant( story.title, skip ) ) {
+            setSourceOnStory( story );
+            goodStories.push( story );
         }
     }
 
-    var searchTerm = DDG.get_query().replace(/(?: news|news ?)/i, '').trim();
+    var searchTerm = DDG.get_query().replace( /(?: news|news ?)/i, '' ).trim();
 
     // If we found a few good stories, display them.
-    if(goodStories.length >= 3) {
-        Spice.add({
+    if ( goodStories.length >= 3 ) {
+        Spice.add( {
             id: 'news',
             name: 'News',
 
@@ -61,8 +61,8 @@ function ddg_spice_news(apiResult) {
             templates: {
                 item: 'news_item'
             }
-        });
+        } );
     } else {
-	Spice.failed('news');
+        Spice.failed( 'news' );
     }
 }

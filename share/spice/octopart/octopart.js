@@ -1,8 +1,8 @@
-function ddg_spice_octopart (api_result) {
+function ddg_spice_octopart( api_result ) {
     "use strict";
 
-    if(!api_result || !api_result.results || api_result.results.length === 0) {
-        return Spice.failed('octopart');
+    if ( !api_result || !api_result.results || api_result.results.length === 0 ) {
+        return Spice.failed( 'octopart' );
     }
 
     // var results = [],
@@ -36,7 +36,7 @@ function ddg_spice_octopart (api_result) {
     //     return;
     // }
 
-    Spice.add({
+    Spice.add( {
         id: 'octopart',
         name: 'Parts',
         data: api_result.results,
@@ -45,22 +45,22 @@ function ddg_spice_octopart (api_result) {
         meta: {
             itemType: 'Parts',
             sourceName: 'Octopart',
-			sourceUrl : 'http://octopart.com/partsearch#search/requestData&q=' + api_result.request.q
+            sourceUrl: 'http://octopart.com/partsearch#search/requestData&q=' + api_result.request.q
         },
-        normalize: function(item) {
-            var img = DDG.getProperty(item, "item.images.0.url_90px");
+        normalize: function ( item ) {
+            var img = DDG.getProperty( item, "item.images.0.url_90px" );
 
             return {
                 brand: item.item.manufacturer.displayname,
-                price: item.item.avg_price[1] + ' ' + item.item.avg_price[0].toFixed(2),
+                price: item.item.avg_price[ 1 ] + ' ' + item.item.avg_price[ 0 ].toFixed( 2 ),
                 img: img,
                 img_m: img,
-				// url_review: item.item.detail_url,
-				url: item.item.detail_url,
-                title: DDG.strip_html(item.item.mpn).toUpperCase(),
-                heading: DDG.strip_html(item.item.mpn).toUpperCase(),
-                description: DDG.strip_html(item.item.short_description),
-                datasheet: item.item.datasheets[0].url
+                // url_review: item.item.detail_url,
+                url: item.item.detail_url,
+                title: DDG.strip_html( item.item.mpn ).toUpperCase(),
+                heading: DDG.strip_html( item.item.mpn ).toUpperCase(),
+                description: DDG.strip_html( item.item.short_description ),
+                datasheet: item.item.datasheets[ 0 ].url
             };
         },
 
@@ -71,8 +71,8 @@ function ddg_spice_octopart (api_result) {
                 buy: Spice.octopart.buy
             }
         }
-        
-    });
+
+    } );
 };
 
 // Handlebars.registerHelper("toFixed", function(number) {

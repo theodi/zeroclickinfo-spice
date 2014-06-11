@@ -1,24 +1,24 @@
-(function(env) {
+( function ( env ) {
     "use strict"
 
     var SOUNDCLOUD_CLIENT_ID = 'df14a65559c0e555d9f9fd950c2d5b17',
-        script = $('[src*="/js/spice/sound_cloud/"]')[0],
-        source = $(script).attr("src"),
-        query = source.match(/sound_cloud\/([^\/]*)/)[1],
+        script = $( '[src*="/js/spice/sound_cloud/"]' )[ 0 ],
+        source = $( script ).attr( "src" ),
+        query = source.match( /sound_cloud\/([^\/]*)/ )[ 1 ],
 
         // Blacklist some adult results.
         skip_ids = {
-            80320921: 1, 
+            80320921: 1,
             75349402: 1
         };
 
-    env.ddg_spice_sound_cloud = function(api_result) {
+    env.ddg_spice_sound_cloud = function ( api_result ) {
 
-        if(!api_result){
-            return Spice.failed("sound_cloud");
+        if ( !api_result ) {
+            return Spice.failed( "sound_cloud" );
         }
 
-        Spice.add({
+        Spice.add( {
             id: 'soundcloud',
             name: 'Audio',
             data: api_result,
@@ -36,12 +36,12 @@
             },
             view: 'Audio',
             model: 'Audio',
-            normalize: function(o) {
+            normalize: function ( o ) {
 
                 var favoriteThreshold = 4;
 
                 // skip items with a low favorite count
-                if(o.favoritings_count < favoriteThreshold){
+                if ( o.favoritings_count < favoriteThreshold ) {
                     return;
                 }
 
@@ -50,17 +50,17 @@
 
                 // Check if it's using the default avatar, if
                 // so switch to waveform and set the flag
-                if (/default_avatar_large/.test(image)) {
+                if ( /default_avatar_large/.test( image ) ) {
                     image = o.waveform_url;
                     usingWaveformImage = 1;
                 } else {
                     // Get the larger image for our IA.
-                    image = image.replace(/large\.jpg/, "t200x200.jpg");
+                    image = image.replace( /large\.jpg/, "t200x200.jpg" );
                 }
 
                 // skip items that can't be streamed or explicit id's we
                 // want to skip for adult content:
-                if (!o.stream_url || skip_ids[o.id]) {
+                if ( !o.stream_url || skip_ids[ o.id ] ) {
                     return;
                 }
 
@@ -76,6 +76,6 @@
                     streamURL: streamURL
                 };
             }
-        });
+        } );
     };
-}(this));
+}( this ) );

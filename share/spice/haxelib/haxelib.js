@@ -1,27 +1,27 @@
-(function(env){
-    env.ddg_spice_haxelib = function(response) {
+( function ( env ) {
+    env.ddg_spice_haxelib = function ( response ) {
         "use strict";
 
-        if((!response || response.err)) {
-    	   return Spice.failed('haxelib'); 
+        if ( ( !response || response.err ) ) {
+            return Spice.failed( 'haxelib' );
         }
 
-        Spice.add({
+        Spice.add( {
             id: 'haxelib',
             name: "Software",
             data: response.info,
             meta: {
-                sourceIconUrl   : 'http://haxe.org/img/haxe2/favicon.ico',
-                sourceUrl       : 'http://lib.haxe.org/p/' + encodeURIComponent(response.info.name),
-                sourceName      : 'Haxelib'
+                sourceIconUrl: 'http://haxe.org/img/haxe2/favicon.ico',
+                sourceUrl: 'http://lib.haxe.org/p/' + encodeURIComponent( response.info.name ),
+                sourceName: 'Haxelib'
             },
             templates: {
-		group: 'base',
+                group: 'base',
                 options: {
                     content: Spice.haxelib.content,
-		    moreAt: true
+                    moreAt: true
                 }
             }
-        });
+        } );
     }
-}(this));
+}( this ) );

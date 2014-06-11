@@ -1,12 +1,12 @@
-(function (env) {
+( function ( env ) {
     "use strict";
-    env.ddg_spice_bitcoin_balance = function(api_result){
+    env.ddg_spice_bitcoin_balance = function ( api_result ) {
 
-        if (!api_result || api_result.error) {
-            return Spice.failed('bitcoin_balance');
+        if ( !api_result || api_result.error ) {
+            return Spice.failed( 'bitcoin_balance' );
         }
-        
-        Spice.add({
+
+        Spice.add( {
             id: "bitcoinBalance",
             name: "Bitcoin Address",
             data: {
@@ -19,11 +19,11 @@
             },
             templates: {
                 group: 'info',
-                options:{
+                options: {
                     content: Spice.bitcoin_balance.content,
                     moreAt: true
                 }
             }
-        });
+        } );
     };
-}(this));
+}( this ) );

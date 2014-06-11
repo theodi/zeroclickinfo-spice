@@ -1,22 +1,22 @@
-(function(env){
+( function ( env ) {
     'use strict';
-    
-    env.ddg_spice_dns = function(api_result) {
 
-        var records = DDG.getProperty(api_result, 'response.records');
-        if (!records.length) {
-            return Spice.failed('dns');
+    env.ddg_spice_dns = function ( api_result ) {
+
+        var records = DDG.getProperty( api_result, 'response.records' );
+        if ( !records.length ) {
+            return Spice.failed( 'dns' );
         }
 
-        api_result.response.records.sort(function(a, b) {
-            if (a.type < b.type) 
-              return -1 
-            if (a.type > b.type)
-              return 1
-            return parseInt(a.priority) - parseInt(b.priority);
-        });
+        api_result.response.records.sort( function ( a, b ) {
+            if ( a.type < b.type )
+                return -1
+            if ( a.type > b.type )
+                return 1
+            return parseInt( a.priority ) - parseInt( b.priority );
+        } );
 
-        Spice.add({
+        Spice.add( {
             id: 'dns',
             name: 'Answer',
             data: api_result.response,
@@ -31,6 +31,6 @@
                     moreAt: true
                 }
             }
-        });
+        } );
     };
-})(this);
+} )( this );

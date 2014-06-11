@@ -1,16 +1,18 @@
-(function(env) {
+( function ( env ) {
     'use strict';
 
-    env.ddg_spice_automeme = function(api_result) {
+    env.ddg_spice_automeme = function ( api_result ) {
 
-        if (!(api_result && api_result.length)) {
-            return Spice.failed('automeme');
+        if ( !( api_result && api_result.length ) ) {
+            return Spice.failed( 'automeme' );
         }
 
-        Spice.add({
+        Spice.add( {
             id: 'automeme',
             name: 'Answer',
-            data: { meme: api_result[0] },
+            data: {
+                meme: api_result[ 0 ]
+            },
             meta: {
                 sourceName: 'Autome.me',
                 sourceUrl: 'http://autome.me/'
@@ -22,6 +24,6 @@
                     moreAt: true
                 }
             }
-        });
+        } );
     }
-})(this);
+} )( this );

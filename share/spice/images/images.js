@@ -1,6 +1,6 @@
-function ddg_spice_images(apiResult) {
+function ddg_spice_images( apiResult ) {
 
-    Spice.add({
+    Spice.add( {
         id: 'images',
         name: 'Images',
 
@@ -16,6 +16,6 @@ function ddg_spice_images(apiResult) {
         relevancy: {
             dup: 'j'
         }
-    });
+    } );
 
 }

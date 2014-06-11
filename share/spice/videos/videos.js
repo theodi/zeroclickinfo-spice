@@ -1,6 +1,6 @@
-function ddg_spice_videos(apiResult) {
+function ddg_spice_videos( apiResult ) {
 
-    Spice.add({
+    Spice.add( {
         id: 'videos',
         name: 'Videos',
 
@@ -18,6 +18,6 @@ function ddg_spice_videos(apiResult) {
         relevancy: {
             dup: 'id'
         }
-    });
+    } );
 
 }

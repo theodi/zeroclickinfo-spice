@@ -1,17 +1,17 @@
-(function(env) {
+( function ( env ) {
     "use strict";
 
-    env.ddg_spice_hacker_news = function(api_result) {
-        var script = $('[src*="/js/spice/hacker_news/"]')[0],
-            source = $(script).attr("src"),
-            query = source.match(/hacker_news\/([^\/]+)/)[1],
+    env.ddg_spice_hacker_news = function ( api_result ) {
+        var script = $( '[src*="/js/spice/hacker_news/"]' )[ 0 ],
+            source = $( script ).attr( "src" ),
+            query = source.match( /hacker_news\/([^\/]+)/ )[ 1 ],
             sourceUrl = 'https://hn.algolia.com/#!/story/forever/0/' + query;
 
-        if(!api_result || !api_result.hits || api_result.hits.length === 0) {
-            return Spice.failed('hacker_news');
+        if ( !api_result || !api_result.hits || api_result.hits.length === 0 ) {
+            return Spice.failed( 'hacker_news' );
         }
 
-        Spice.add({
+        Spice.add( {
             id: 'hacker_news',
             name: 'Social',
             data: api_result.hits,
@@ -20,16 +20,16 @@
                 sourceUrl: sourceUrl,
                 total: api_result.hits,
                 itemType: 'Hacker News',
-                searchTerm: decodeURIComponent(query)
+                searchTerm: decodeURIComponent( query )
             },
-            normalize: function(item) {
+            normalize: function ( item ) {
                 return {
                     title: item.title,
-                    url: (item.url) ? item.url : 'https://news.ycombinator.com/item?id=' + item.objectID,
+                    url: ( item.url ) ? item.url : 'https://news.ycombinator.com/item?id=' + item.objectID,
                     points: item.points || 0,
-                    pointsLabel: (item.points == 1) ? 'Point' : 'Points',
+                    pointsLabel: ( item.points == 1 ) ? 'Point' : 'Points',
                     num_comments: item.num_comments || 0,
-                    commentsLabel: (item.num_comments == 1) ? 'Comment' : 'Comments',
+                    commentsLabel: ( item.num_comments == 1 ) ? 'Comment' : 'Comments',
                     domain: 'news.ycombinator.com',
                     id: item.objectID
                 };
@@ -46,6 +46,6 @@
                 ]
             },
             */
-        });
+        } );
     }
-}(this));
+}( this ) );

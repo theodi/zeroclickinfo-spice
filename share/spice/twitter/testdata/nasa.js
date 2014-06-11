@@ -1,4 +1,4 @@
-ddg_spice_twitter({
+ddg_spice_twitter( {
     user: "NASA",
     description: "Explore the universe and discover our home planet with @NASA. We usually post in EDT (UTC-4).",
     status: "",
@@ -71,4 +71,4 @@ ddg_spice_twitter({
         in_reply_to_screen_name: null
     },
     profile_image: "http://pbs.twimg.com/profile_images/188302352/nasalogo_twitter_normal.jpg"
-});
+} );

@@ -1,25 +1,25 @@
-(function(env){
+( function ( env ) {
     "use strict";
 
-    env.ddg_spice_code_search = function (api_result) {
+    env.ddg_spice_code_search = function ( api_result ) {
 
-        if (!api_result.results.length === 0) {
-            return Spice.failed('code_search');
+        if ( !api_result.results.length === 0 ) {
+            return Spice.failed( 'code_search' );
         }
 
-        var query = encodeURIComponent(api_result.query);
+        var query = encodeURIComponent( api_result.query );
 
         var keys = [];
 
-        $.each(api_result.results[0].lines, function(k, v){
-            keys.push(k)
-        });
+        $.each( api_result.results[ 0 ].lines, function ( k, v ) {
+            keys.push( k )
+        } );
 
-        Spice.add({
+        Spice.add( {
             id: 'code_search',
             name: "Software",
             data: {
-                record_data: api_result.results[0].lines,
+                record_data: api_result.results[ 0 ].lines,
                 record_keys: keys
             },
             meta: {
@@ -33,10 +33,10 @@
                     moreAt: true
                 }
             }
-        });
+        } );
     }
 
-    Spice.registerHelper("stripNewline", function(text){
-        return text.replace(/\r/g, "");
-    });
-}(this));
+    Spice.registerHelper( "stripNewline", function ( text ) {
+        return text.replace( /\r/g, "" );
+    } );
+}( this ) );
