@@ -1,11 +1,11 @@
 (function (env) {
     "use strict";
-    env.ddg_spice_bitcoin_balance = function(api_result){
+    env.ddg_spice_bitcoin_balance = function (api_result) {
 
         if (!api_result || api_result.error) {
             return Spice.failed('bitcoin_balance');
         }
-        
+
         Spice.add({
             id: "bitcoinBalance",
             name: "Bitcoin Address",
@@ -19,7 +19,7 @@
             },
             templates: {
                 group: 'info',
-                options:{
+                options: {
                     content: Spice.bitcoin_balance.content,
                     moreAt: true
                 }

@@ -1,9 +1,9 @@
-(function(env){    
-    env.ddg_spice_word_map = function(api_result) {
+(function (env) {
+    env.ddg_spice_word_map = function (api_result) {
         "use strict";
 
-        if ( (!api_result) || ("200" !== api_result.result_code)) {
-    	   return Spice.failed('word_map');
+        if ((!api_result) || ("200" !== api_result.result_code)) {
+            return Spice.failed('word_map');
         }
 
         Spice.add({
@@ -19,7 +19,7 @@
                 group: 'base',
                 options: {
                     content: Spice.word_map.content,
-		    moreAt: true
+                    moreAt: true
                 }
             }
         });

@@ -8,15 +8,15 @@ function ddg_spice_aur(response) {
     var query = DDG.get_query().replace(/(aur|archlinux package|arch package|arch linux package)/, "");
 
     Spice.add({
-        data             : response.results,
+        data: response.results,
         // header1          : response.results[0].Name + " (AUR)",
-        sourceUrl       : 'https://aur.archlinux.org/packages/?O=0&K=' + query,
-        sourceName      : 'ArchLinux User Repository',
+        sourceUrl: 'https://aur.archlinux.org/packages/?O=0&K=' + query,
+        sourceName: 'ArchLinux User Repository',
         name: 'Software',
-        id       : 'aur',
-        templates : {
+        id: 'aur',
+        templates: {
             item: Spice.aur.aur // will use this also for a single item
         },
-        
+
     });
 }

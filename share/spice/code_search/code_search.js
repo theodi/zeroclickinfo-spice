@@ -1,4 +1,4 @@
-(function(env){
+(function (env) {
     "use strict";
 
     env.ddg_spice_code_search = function (api_result) {
@@ -11,7 +11,7 @@
 
         var keys = [];
 
-        $.each(api_result.results[0].lines, function(k, v){
+        $.each(api_result.results[0].lines, function (k, v) {
             keys.push(k)
         });
 
@@ -36,7 +36,7 @@
         });
     }
 
-    Spice.registerHelper("stripNewline", function(text){
+    Spice.registerHelper("stripNewline", function (text) {
         return text.replace(/\r/g, "");
     });
 }(this));

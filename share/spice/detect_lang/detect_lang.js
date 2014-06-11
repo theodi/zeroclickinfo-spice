@@ -1,33 +1,33 @@
-function ddg_spice_detect_lang (api_result) {
+function ddg_spice_detect_lang(api_result) {
     "use strict";
 
     // Check for any errors.
-    if(!api_result || !api_result.data || !api_result.data.detections || api_result.data.detections.length === 0) {
+    if (!api_result || !api_result.data || !api_result.data.detections || api_result.data.detections.length === 0) {
         return Spice.failed('detect_lang');
     }
 
     var query = "";
-    $("script").each(function() {
+    $("script").each(function () {
         var matched, result;
         matched = $(this).attr("src");
-        if(matched) {
+        if (matched) {
             result = matched.match(/\/js\/spice\/detect_lang\/([^\/]+)/);
-            if(result) {
+            if (result) {
                 query = decodeURIComponent(result[1]);
             }
         }
     });
 
-    api_result.data.detections.sort(function(a, b) {
-        if(a.confidence > b.confidence) {
+    api_result.data.detections.sort(function (a, b) {
+        if (a.confidence > b.confidence) {
             return -1;
-        } else if(a.confidence < b.confidence) {
+        } else if (a.confidence < b.confidence) {
             return 1;
         }
         return 0;
     });
 
-    var expandLang = function(language) {
+    var expandLang = function (language) {
         var langs = {
             af: "Afrikaans",
             am: "Amharic",
@@ -110,7 +110,7 @@ function ddg_spice_detect_lang (api_result) {
     };
     Handlebars.registerHelper("expandLang", expandLang);
 
-    if(expandLang(api_result.data.detections[0].language) === "") {
+    if (expandLang(api_result.data.detections[0].language) === "") {
         return;
     }
 
@@ -124,25 +124,28 @@ function ddg_spice_detect_lang (api_result) {
     // Display the plug-in.
     Spice.add({
         id: 'detect_lang',
-        data: { first: d0, second: d1 },
+        data: {
+            first: d0,
+            second: d1
+        },
         name: "Answer",
         meta: {
-            sourceUrl       : "http://detectlanguage.com/",
-            sourceName      : "Detect Language",
+            sourceUrl: "http://detectlanguage.com/",
+            sourceName: "Detect Language",
         },
-	signal: 'high',
+        signal: 'high',
         templates: {
             group: 'base',
             options: {
                 content: Spice.detect_lang.content,
-		moreAt: true
+                moreAt: true
             }
         }
-        
+
     });
 };
 
-Handlebars.registerHelper("DetectLang_toPercent", function(confidence) {
+Handlebars.registerHelper("DetectLang_toPercent", function (confidence) {
     "use strict";
     var percentage = Math.round(confidence * 100);
     return (percentage > 100 ? 100 : percentage) + "% sure";

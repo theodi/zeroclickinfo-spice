@@ -1,4 +1,4 @@
-function ddg_spice_translate_detect_phrase (api_result) {
+function ddg_spice_translate_detect_phrase(api_result) {
 
     var params = get_params("detect", api_result);
 

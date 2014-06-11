@@ -1,7 +1,7 @@
-(function(env) {
+(function (env) {
     "use strict";
 
-    env.ddg_spice_alternative_to = function(api_result) {
+    env.ddg_spice_alternative_to = function (api_result) {
 
         if (!api_result || !api_result.Items) {
             return Spice.failed('alternative_to');
@@ -18,22 +18,22 @@
                 sourceUrl: 'http://alternativeto.net/',
                 sourceName: 'AlternativeTo'
             },
-            normalize: function(item) {
+            normalize: function (item) {
                 return {
                     ShortDescription: DDG.strip_html(DDG.strip_href(item.ShortDescription)),
                     url: item.Url,
-		    icon: item.IconUrl,
-		    title: item.Name,
-		    description: item.ShortDescription
+                    icon: item.IconUrl,
+                    title: item.Name,
+                    description: item.ShortDescription
                 };
             },
             templates: {
                 group: 'icon',
-		detail: false,
-		item_detail: false,
-		options: {
-		    footer: Spice.alternative_to.footer
-		}
+                detail: false,
+                item_detail: false,
+                options: {
+                    footer: Spice.alternative_to.footer
+                }
             }
         });
     };
@@ -42,4 +42,4 @@
         return (platforms.length > 1) ? "Multiplatform" : platforms[0];
     });
 
-}(this)); 
+}(this));

@@ -10,7 +10,7 @@ ddg_spice_twitter({
         place: null,
         retweet_count: 268,
         entities: {
-            media: [ {
+            media: [{
                 display_url: "pic.twitter.com/9sHafNdXJx",
                 id_str: "457884171390578689",
                 sizes: {
@@ -40,17 +40,17 @@ ddg_spice_twitter({
                 url: "http://t.co/9sHafNdXJx",
                 type: "photo",
                 id: 0x65abb3a58027000,
-                indices: [ 112, 134 ],
+                indices: [112, 134],
                 media_url: "http://pbs.twimg.com/media/Blq7OlgCcAEZSD8.png"
-            } ],
+            }],
             user_mentions: [],
-            hashtags: [ {
+            hashtags: [{
                 text: "Dragon",
-                indices: [ 0, 7 ]
+                indices: [0, 7]
             }, {
                 text: "ISS",
-                indices: [ 25, 29 ]
-            } ],
+                indices: [25, 29]
+            }],
             symbols: [],
             urls: []
         },

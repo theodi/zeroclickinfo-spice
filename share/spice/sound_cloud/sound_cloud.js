@@ -1,4 +1,4 @@
-(function(env) {
+(function (env) {
     "use strict"
 
     var SOUNDCLOUD_CLIENT_ID = 'df14a65559c0e555d9f9fd950c2d5b17',
@@ -8,13 +8,13 @@
 
         // Blacklist some adult results.
         skip_ids = {
-            80320921: 1, 
+            80320921: 1,
             75349402: 1
         };
 
-    env.ddg_spice_sound_cloud = function(api_result) {
+    env.ddg_spice_sound_cloud = function (api_result) {
 
-        if(!api_result){
+        if (!api_result) {
             return Spice.failed("sound_cloud");
         }
 
@@ -36,12 +36,12 @@
             },
             view: 'Audio',
             model: 'Audio',
-            normalize: function(o) {
+            normalize: function (o) {
 
                 var favoriteThreshold = 4;
 
                 // skip items with a low favorite count
-                if(o.favoritings_count < favoriteThreshold){
+                if (o.favoritings_count < favoriteThreshold) {
                     return;
                 }
 

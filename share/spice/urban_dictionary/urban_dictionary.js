@@ -2,40 +2,39 @@
 // "urban dictionary cool" or "urban dictionary ROTFL."
 
 // Note: This plugin can display adult content and profanity.
-(function(env) {
-  env.ddg_spice_urban_dictionary = function(response) {
-    "use strict";
+(function (env) {
+    env.ddg_spice_urban_dictionary = function (response) {
+        "use strict";
 
-    if (!(response && response.result_type === "exact"
-          && response.list && response.list[0])) {
-        return Spice.failed('urban_dictionary');
-    }
-
-    var word       = response.list[0].word;
-
-    Spice.add({
-      id: "urban_dictionary",
-      name: "Dictionary",
-      data: {
-        record_data: response.list[0],
-        record_keys: ['word', 'definition', 'example']
-      },
-      meta: {
-        sourceUrl: 'http://www.urbandictionary.com/define.php?term=' + word,
-        sourceName: 'Urban Dictionary'
-      },
-      templates: {
-        group: 'base',
-        options: {
-          content: 'record',
-          moreAt: true
+        if (!(response && response.result_type === "exact" && response.list && response.list[0])) {
+            return Spice.failed('urban_dictionary');
         }
-      },
-      normalize : function(item){
-        return{
-          definition: item.record_data.definition.replace(/(\r?\n)+/gi, '')
-        };
-      }
-    });
-  }
+
+        var word = response.list[0].word;
+
+        Spice.add({
+            id: "urban_dictionary",
+            name: "Dictionary",
+            data: {
+                record_data: response.list[0],
+                record_keys: ['word', 'definition', 'example']
+            },
+            meta: {
+                sourceUrl: 'http://www.urbandictionary.com/define.php?term=' + word,
+                sourceName: 'Urban Dictionary'
+            },
+            templates: {
+                group: 'base',
+                options: {
+                    content: 'record',
+                    moreAt: true
+                }
+            },
+            normalize: function (item) {
+                return {
+                    definition: item.record_data.definition.replace(/(\r?\n)+/gi, '')
+                };
+            }
+        });
+    }
 }(this));

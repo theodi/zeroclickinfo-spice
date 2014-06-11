@@ -6,32 +6,31 @@ function ddg_spice_imdb(api_result) {
     }
 
     Spice.add({
-        data              : api_result,
-        header1           : api_result.Title + ' (IMDb)',
-        sourceUrl        : 'http://www.imdb.com/title/'
-            + api_result.imdbID,
-        sourceName       : 'IMDb',
+        data: api_result,
+        header1: api_result.Title + ' (IMDb)',
+        sourceUrl: 'http://www.imdb.com/title/' + api_result.imdbID,
+        sourceName: 'IMDb',
         templates: {
             item: Spice.imdb.imdb,
             detail: Spice.imdb.imdb
         },
-        
-        
-        
+
+
+
     });
 }
 
 
-Handlebars.registerHelper('runtime', function(){
+Handlebars.registerHelper('runtime', function () {
     "use strict";
 
     return (movie.runtime !== 'N/A') ?
-    	'' :
-    	this.Runtime.replace(/\s/g, '').replace('min', 'm');
+        '' :
+        this.Runtime.replace(/\s/g, '').replace('min', 'm');
 });
 
 
-function reverse(s){
+function reverse(s) {
     "use strict";
 
     return s.split("").reverse().join("");
@@ -53,7 +52,7 @@ function replaceLast(input, a, b) {
  *   'an' R rated movie, or
  *   'a'  PG rated movie
  */
-Handlebars.registerHelper("rating_adjective", function() {
+Handlebars.registerHelper("rating_adjective", function () {
     "use strict";
 
     var currentDate = new Date();
@@ -61,19 +60,19 @@ Handlebars.registerHelper("rating_adjective", function() {
     var adjective;
 
     // Is it released?
-    if ( released > currentDate || this.Year > currentDate.getFullYear() ){
+    if (released > currentDate || this.Year > currentDate.getFullYear()) {
         return 'an upcoming ';
-	}
+    }
 
-	return ( this.Rated === "R" ||
-		this.Rated === "M" || 
-		this.Rated === "NC-17" ||
-		this.Rated === "N/A" ) ?  "an" :"a";
+    return (this.Rated === "R" ||
+        this.Rated === "M" ||
+        this.Rated === "NC-17" ||
+        this.Rated === "N/A") ? "an" : "a";
 });
 
 
 // mpaa_rating
-Handlebars.registerHelper('mpaa_rating', function(){
+Handlebars.registerHelper('mpaa_rating', function () {
     "use strict";
 
     return (this.Rated === 'N/A') ? 'unrated' : this.Rated;
@@ -81,7 +80,7 @@ Handlebars.registerHelper('mpaa_rating', function(){
 
 
 // runtime
-Handlebars.registerHelper('get_runtime', function(){
+Handlebars.registerHelper('get_runtime', function () {
     "use strict";
 
     if (this.Runtime !== 'N/A') {
@@ -94,18 +93,18 @@ Handlebars.registerHelper('get_runtime', function(){
 
 
 // check for movie or tv show
-Handlebars.registerHelper('result_type', function(){
+Handlebars.registerHelper('result_type', function () {
     "use strict";
 
     if (this.Type !== "N/A") {
-	return this.Type;
+        return this.Type;
     }
     return "title"; //eg, Goodbye Miami (2013) is an unrated title starring...
 });
 
 
 // imdbRating
-Handlebars.registerHelper('get_rating', function(){
+Handlebars.registerHelper('get_rating', function () {
     "use strict";
 
     return (this.imdbRating !== 'N/A') ?
@@ -115,34 +114,28 @@ Handlebars.registerHelper('get_rating', function(){
 
 
 // actors
-Handlebars.registerHelper('actors_and_director', function(){
+Handlebars.registerHelper('actors_and_director', function () {
     "use strict";
 
     if (this.Actors !== 'N/A' && this.Director !== 'N/A') {
-	   return "starring " + this.Actors +
-              " and directed by " + this.Director;
-    }
-
-    else if (this.Actors !== 'N/A'){
+        return "starring " + this.Actors +
+            " and directed by " + this.Director;
+    } else if (this.Actors !== 'N/A') {
         var actors = replaceLast(this.Actors, ',', ' and ');
-	return "starring " + actors;
-    }
-
-    else if (this.Director !== 'N/A') {
-    	return "directed by " + this.Director;
-    }
-
-    else {
+        return "starring " + actors;
+    } else if (this.Director !== 'N/A') {
+        return "directed by " + this.Director;
+    } else {
         return '';
     }
 });
 
 // movie plot
-Handlebars.registerHelper('plot', function(){
+Handlebars.registerHelper('plot', function () {
     "use strict";
 
     if (this.Plot !== 'N/A') {
-    	return this.Plot;
+        return this.Plot;
     }
 
     return '';

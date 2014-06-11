@@ -1,7 +1,7 @@
-(function(env) {    
-    env.ddg_spice_ruby_gems = function(api_result) {
+(function (env) {
+    env.ddg_spice_ruby_gems = function (api_result) {
         "use strict";
-        
+
         if (!api_result || api_result.length === 0) {
             return Spice.failed("ruby_gems");
         }
@@ -22,13 +22,13 @@
                 total: api_result.length,
                 itemType: "gems",
             },
-            templates:{
+            templates: {
                 group: 'text',
                 detail: false,
-		item_detail: false
+                item_detail: false
             },
-            normalize : function(item){
-                return{
+            normalize: function (item) {
+                return {
                     title: item.name,
                     url: item.project_uri,
                     description: item.info

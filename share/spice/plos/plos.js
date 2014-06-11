@@ -1,5 +1,5 @@
-(function(env) {     
-    env.ddg_spice_plos = function(api_result) {
+(function (env) {
+    env.ddg_spice_plos = function (api_result) {
         "use strict";
 
         // Grab number of results.
@@ -23,26 +23,26 @@
                 itemType: "Papers",
                 sourceName: "PLOS",
                 sourceUrl: 'http://www.plosone.org/search/advanced?unformattedQuery=' + query
-            }, 
-	    normalize: function(item) {
-		return {
-		    url: "http://dx.doi.org/" + item.id
-		};
-	    },
+            },
+            normalize: function (item) {
+                return {
+                    url: "http://dx.doi.org/" + item.id
+                };
+            },
             templates: {
                 group: 'base',
                 options: {
                     content: Spice.plos.item
                 },
-		detail: false,
-		item_detail: false
-             }
+                detail: false,
+                item_detail: false
+            }
         });
     }
 }(this));
 
 // Convert full publication date to year only.
-Handlebars.registerHelper('PLOS_year', function(pubdate) {
+Handlebars.registerHelper('PLOS_year', function (pubdate) {
     "use strict";
 
     var year = pubdate.substr(0, 4);

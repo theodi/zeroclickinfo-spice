@@ -1,7 +1,7 @@
-function ddg_spice_google_plus (api_result) {
+function ddg_spice_google_plus(api_result) {
     "use strict";
 
-    if(!api_result || !api_result.items || api_result.items.length === 0) {
+    if (!api_result || !api_result.items || api_result.items.length === 0) {
         return Spice.failed("googleplus");
     }
 
@@ -10,22 +10,22 @@ function ddg_spice_google_plus (api_result) {
         name: 'Social',
         data: api_result.items,
         meta: {
-            sourceName : 'Google+',
-            sourceUrl : 'http://plus.google.com',
+            sourceName: 'Google+',
+            sourceUrl: 'http://plus.google.com',
             itemType: "Google+ Profile" + (api_result.items.length > 1 ? 's' : '')
         },
         templates: {
-            group: 'products_simple',            
+            group: 'products_simple',
             item_detail: false,
             detail: false,
             options: {
                 variant: 'narrow'
             }
         },
-        normalize : function(item) {
+        normalize: function (item) {
             var image = item.image.url.replace(/sz=50$/, "sz=100");
             return {
-                image : image.replace(/^https/, "http"),
+                image: image.replace(/^https/, "http"),
                 title: item.displayName
             };
         }

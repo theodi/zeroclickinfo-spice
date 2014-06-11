@@ -1,8 +1,8 @@
-function ddg_spice_khan_academy ( api_result ) {
+function ddg_spice_khan_academy(api_result) {
     "use strict";
 
     // check for response
-    if ( $.isEmptyObject(api_result.feed.entry) ) {
+    if ($.isEmptyObject(api_result.feed.entry)) {
         return Spice.failed('khan_academy');
     }
 
@@ -17,44 +17,44 @@ function ddg_spice_khan_academy ( api_result ) {
     }
 
     Spice.add({
-        data                     : api_result,
-        sourceName              : 'Khan Academy',
-        sourceUrl               : 'https://www.khanacademy.org/' + query,
-        header1                  : header,
-        
-        
-        id               : "khan_academy",
+        data: api_result,
+        sourceName: 'Khan Academy',
+        sourceUrl: 'https://www.khanacademy.org/' + query,
+        header1: header,
+
+
+        id: "khan_academy",
         view: "Tiles",
-        templates         : {
-            items           : api_result.feed.entry,
+        templates: {
+            items: api_result.feed.entry,
             detail: Spice.khan_academy.khan_academy_detail,
-            li_width : 120,
-            single_item_handler: function(obj) {
+            li_width: 120,
+            single_item_handler: function (obj) {
                 // This disables autoplay.
                 obj.data.feed.entry[0].single = true;
-                }
-            },
-        item_callback: function() {
+            }
+        },
+        item_callback: function () {
             resizeDetail();
         }
     });
 
     function resizeDetail() {
         var $khan = $("#spice_khan_academy");
-        var width = $khan.width() - 14;    //need 7px of padding on each side
-        var height = Math.floor(width * 0.5625) + 30;    //30px for player menu
+        var width = $khan.width() - 14; //need 7px of padding on each side
+        var height = Math.floor(width * 0.5625) + 30; //30px for player menu
         $("#spice_khan_academy #video-embed").width(width);
         $("#spice_khan_academy  #video-embed").height(height);
     };
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         // Maintain 16/9 aspect ratio
         resizeDetail();
         $(window).resize(resizeDetail);
     });
 }
 
-Handlebars.registerHelper ("embedURL", function(single) {
+Handlebars.registerHelper("embedURL", function (single) {
     "use strict";
 
     var youtube_params = {
@@ -73,7 +73,7 @@ Handlebars.registerHelper ("embedURL", function(single) {
     // Concatenate all the parameters here.
     function parameters() {
         var result = [];
-        for(var o in youtube_params) {
+        for (var o in youtube_params) {
             result.push(o + "=" + youtube_params[o]);
         }
         return result.join("&");
@@ -83,7 +83,7 @@ Handlebars.registerHelper ("embedURL", function(single) {
 });
 
 // forms the url for a khan_academy product image
-Handlebars.registerHelper ('video_id', function() {
+Handlebars.registerHelper('video_id', function () {
     "use strict";
 
     var video_id = this.id.$t.split(":").pop();
@@ -91,7 +91,7 @@ Handlebars.registerHelper ('video_id', function() {
 });
 
 // forms the url for a khan_academy product image
-Handlebars.registerHelper ('image_url', function() {
+Handlebars.registerHelper('image_url', function () {
     "use strict";
 
     var image_url = this.media$group.media$thumbnail[1].url;

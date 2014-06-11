@@ -1,5 +1,5 @@
-(function(env) {
-    env.ddg_spice_meta_cpan = function(api_result) {
+(function (env) {
+    env.ddg_spice_meta_cpan = function (api_result) {
         "use strict";
 
         if (!(api_result && api_result.author && api_result.version)) {
@@ -17,7 +17,7 @@
             name: "Software",
             data: {
                 record_data: api_result,
-                record_keys: ['abstract','author','version','description']
+                record_keys: ['abstract', 'author', 'version', 'description']
             },
             meta: {
                 sourceName: "MetaCPAN",
@@ -27,7 +27,7 @@
                 group: 'base',
                 options: {
                     content: 'record',
-		    moreAt: true
+                    moreAt: true
                 }
             }
         });

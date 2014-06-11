@@ -1,35 +1,35 @@
-function ddg_spice_plugin_name ( api_result ) {
-  "use strict";
+function ddg_spice_plugin_name(api_result) {
+    "use strict";
 
-  /* Make sure result exists */
+    /* Make sure result exists */
 
-  Spice.add({
-    data             : api_result,
-    header1          : ' ',
-    sourceName      : ' ',
-    sourceUrl       : 'https://source.website.com',
-    templates: {
-            item: Spice. . ,
-            detail: Spice. . 
+    Spice.add({
+        data: api_result,
+        header1: ' ',
+        sourceName: ' ',
+        sourceUrl: 'https://source.website.com',
+        templates: {
+            item: Spice..,
+            detail: Spice..
         },
-    
-  });
 
-  // Any private functions here
-  function myPrivateFn ( param1, param2 ) {
+    });
 
-  }
+    // Any private functions here
+    function myPrivateFn(param1, param2) {
+
+    }
 
 }
 
 
 // Any Handlebars helpers here
-Handlebars.registerHelper ('helper_name', function() {
-  "use strict";
+Handlebars.registerHelper('helper_name', function () {
+    "use strict";
 
-  var out;
+    var out;
 
-  /* Logic to build output */
+    /* Logic to build output */
 
-  return out;
+    return out;
 });

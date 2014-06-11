@@ -2,7 +2,7 @@ function ddg_spice_amazon(api_result) {
     "use strict";
 
     if (!api_result || !api_result.results ||
-            !api_result.results.length || api_result.results.length == 0) {
+        !api_result.results.length || api_result.results.length == 0) {
         return Spice.failed('products');
     }
 
@@ -34,11 +34,13 @@ function ddg_spice_amazon(api_result) {
         // the individual ajax requests to get ratings data. Allows
         // products to get to show() asap so we have fewer fallbacks,
         // and saves on useless http requests for hidden products tabs.
-        onShow: function() {
+        onShow: function () {
             // only do this on the first time the tab is shown:
-            if (loadedRatingsData) { return; }
+            if (loadedRatingsData) {
+                return;
+            }
 
-            var onGotRatingsData = function(r,s,x){
+            var onGotRatingsData = function (r, s, x) {
                 if (r.stars.match(/stars-(\d)-(\d)/)) {
                     this.rating = RegExp.$1 + "." + RegExp.$2;
                 }
@@ -50,19 +52,19 @@ function ddg_spice_amazon(api_result) {
                 if (this.$html) {
                     var $ratingsWrapper = this.$html.find('.tile__rating');
                     if ($ratingsWrapper && $ratingsWrapper.length) {
-                        $ratingsWrapper.html( Handlebars.helpers.starsAndReviews(this.rating, this.reviewCount, this.url_review, true) );
+                        $ratingsWrapper.html(Handlebars.helpers.starsAndReviews(this.rating, this.reviewCount, this.url_review, true));
                     }
                 }
             }
 
-            for(var i=0;i<items.length;i++){
+            for (var i = 0; i < items.length; i++) {
                 var item = items[i],
                     arg = item.rating,
                     url = '/m.js?r=';
 
                 arg = arg.replace(/(?:.com.au|.com.br|.cn|.fr|.de|.in|.it|.co.jp|.mx|.es|.co.uk|.com|.ca?)/i, '');
                 arg = arg.replace('http://www.amazon/reviews/iframe?', '');
-                $.getJSON(url + encodeURIComponent(arg),onGotRatingsData.bind(item));
+                $.getJSON(url + encodeURIComponent(arg), onGotRatingsData.bind(item));
             }
 
             // set flag so we only load it once:

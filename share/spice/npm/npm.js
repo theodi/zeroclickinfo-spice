@@ -1,6 +1,6 @@
 (function (env) {
     "use strict";
-    env.ddg_spice_npm = function(api_result){
+    env.ddg_spice_npm = function (api_result) {
 
         if (api_result.error) {
             return Spice.failed('npm');

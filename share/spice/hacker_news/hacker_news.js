@@ -1,13 +1,13 @@
-(function(env) {
+(function (env) {
     "use strict";
 
-    env.ddg_spice_hacker_news = function(api_result) {
+    env.ddg_spice_hacker_news = function (api_result) {
         var script = $('[src*="/js/spice/hacker_news/"]')[0],
             source = $(script).attr("src"),
             query = source.match(/hacker_news\/([^\/]+)/)[1],
             sourceUrl = 'https://hn.algolia.com/#!/story/forever/0/' + query;
 
-        if(!api_result || !api_result.hits || api_result.hits.length === 0) {
+        if (!api_result || !api_result.hits || api_result.hits.length === 0) {
             return Spice.failed('hacker_news');
         }
 
@@ -22,7 +22,7 @@
                 itemType: 'Hacker News',
                 searchTerm: decodeURIComponent(query)
             },
-            normalize: function(item) {
+            normalize: function (item) {
                 return {
                     title: item.title,
                     url: (item.url) ? item.url : 'https://news.ycombinator.com/item?id=' + item.objectID,

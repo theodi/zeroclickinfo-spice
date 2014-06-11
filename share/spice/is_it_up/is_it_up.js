@@ -1,8 +1,8 @@
-(function(env) {    
-    env.ddg_spice_is_it_up = function(api_result) {
+(function (env) {
+    env.ddg_spice_is_it_up = function (api_result) {
         "use strict";
 
-        if(!api_result){
+        if (!api_result) {
             return Spice.failed('is_it_up');
         }
 
@@ -23,10 +23,9 @@
                 group: 'base',
                 options: {
                     content: Spice.is_it_up.detail,
-		    moreAt: true
+                    moreAt: true
                 }
             }
         });
     }
 }(this));
-

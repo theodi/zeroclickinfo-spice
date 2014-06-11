@@ -4,7 +4,7 @@ function ddg_spice_search_code(api_response) {
     var query = api_response.query;
     var data = api_response.results;
 
-    if(!data.length || data.length === 0) {
+    if (!data.length || data.length === 0) {
         return Spice.failed('search_code');
     }
 
@@ -39,14 +39,14 @@ function ddg_spice_search_code(api_response) {
     }
 
     Spice.add({
-        data             : result,
-        header1          : formatName(result),
-        sourceUrl       : 'http://searchco.de/?q=' + query,
-        sourceName      : 'search[code]',
+        data: result,
+        header1: formatName(result),
+        sourceUrl: 'http://searchco.de/?q=' + query,
+        sourceName: 'search[code]',
         templates: {
             item: Spice.search_code.search_code,
             detail: Spice.search_code.search_code
         },
-        
+
     });
 }
