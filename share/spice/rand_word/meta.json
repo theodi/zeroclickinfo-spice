@@ -18,6 +18,8 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/RandWord.pm",
-      "t/RandWord.t"
+      "t/RandWord.t",
+      "share/spice/rand_word/content.handlebars",
+      "share/spice/rand_word/rand_word.js"
    ]
 }

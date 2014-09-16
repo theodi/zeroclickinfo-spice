@@ -18,6 +18,10 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/BBC.pm",
-      "t/BBC.t"
+      "t/BBC.t",
+      "share/spice/bbc/bbc.css",
+      "share/spice/bbc/bbc.js",
+      "share/spice/bbc/buy.handlebars",
+      "share/spice/bbc/subtitle_content.handlebars"
    ]
 }

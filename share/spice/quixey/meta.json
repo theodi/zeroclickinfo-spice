@@ -20,6 +20,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Quixey.pm",
-      "t/Quixey.t"
+      "t/Quixey.t",
+      "share/spice/quixey/buy.handlebars",
+      "share/spice/quixey/quixey.js",
+      "share/spice/quixey/quixey_logo.png"
    ]
 }

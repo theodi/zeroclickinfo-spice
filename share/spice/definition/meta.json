@@ -16,7 +16,7 @@
    "id" : "definition",
    "dev_milestone" : "live",
    "code" : [
-      "lib/DDG/Spice/Dictionary/Definition.pm",
+      "lib/DDG/Spice/Dictionary.pm",
       "t/Dictionary.t"
    ]
 }

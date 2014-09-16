@@ -17,6 +17,11 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Octopart.pm",
-      "t/Octopart.t"
+      "t/Octopart.t",
+      "share/spice/octopart/buy.handlebars",
+      "share/spice/octopart/octopart.css",
+      "share/spice/octopart/octopart.handlebars",
+      "share/spice/octopart/octopart.js",
+      "share/spice/octopart/pdf_small.jpg"
    ]
 }

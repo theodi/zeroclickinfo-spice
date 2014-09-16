@@ -18,6 +18,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/WGHA.pm",
-      "t/WGHA.t"
+      "t/WGHA.t",
+      "share/spice/wgha/footer.handlebars",
+      "share/spice/wgha/wgha.css",
+      "share/spice/wgha/wgha.js"
    ]
 }

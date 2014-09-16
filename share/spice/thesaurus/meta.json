@@ -19,6 +19,10 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Thesaurus.pm",
-      "t/Thesaurus.t"
+      "t/Thesaurus.t",
+      "share/spice/thesaurus/content.handlebars",
+      "share/spice/thesaurus/thesaurus.css",
+      "share/spice/thesaurus/thesaurus.js",
+      "share/spice/thesaurus/title_content.handlebars"
    ]
 }

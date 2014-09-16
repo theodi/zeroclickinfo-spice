@@ -15,6 +15,10 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/RedditSearch.pm",
-      "t/RedditSearch.t"
+      "t/RedditSearch.t",
+      "share/spice/reddit_search/arrow_up.png",
+      "share/spice/reddit_search/footer.handlebars",
+      "share/spice/reddit_search/reddit_search.css",
+      "share/spice/reddit_search/reddit_search.js"
    ]
 }

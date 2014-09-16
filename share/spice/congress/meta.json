@@ -18,6 +18,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Congress.pm",
-      "t/Congress.t"
+      "t/Congress.t",
+      "share/spice/congress/buy.handlebars",
+      "share/spice/congress/congress.css",
+      "share/spice/congress/congress.js"
    ]
 }

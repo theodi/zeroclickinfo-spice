@@ -18,6 +18,11 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Forecast.pm",
-      "t/Forecast.t"
+      "t/Forecast.t",
+      "share/spice/forecast/forecast.css",
+      "share/spice/forecast/forecast.handlebars",
+      "share/spice/forecast/forecast.js",
+      "share/spice/forecast/forecast_detail_mobile.handlebars",
+      "share/spice/forecast/forecast_item.handlebars"
    ]
 }

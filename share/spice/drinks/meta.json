@@ -18,6 +18,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Drinks.pm",
-      "t/Drinks.t"
+      "t/Drinks.t",
+      "share/spice/drinks/detail.handlebars",
+      "share/spice/drinks/drinks.css",
+      "share/spice/drinks/drinks.js"
    ]
 }

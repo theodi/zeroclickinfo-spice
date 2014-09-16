@@ -13,6 +13,7 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Amazon.pm",
-      "t/Amazon.t"
+      "t/Amazon.t",
+      "share/spice/amazon/amazon.js"
    ]
 }

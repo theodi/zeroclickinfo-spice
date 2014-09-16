@@ -19,6 +19,16 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/InTheaters.pm",
-      "t/InTheaters.t"
+      "t/InTheaters.t",
+      "share/spice/in_theaters/buy.handlebars",
+      "share/spice/in_theaters/certified-fresh.png",
+      "share/spice/in_theaters/certified-fresh.retina.png",
+      "share/spice/in_theaters/fresh.png",
+      "share/spice/in_theaters/fresh.retina.png",
+      "share/spice/in_theaters/in_theaters.css",
+      "share/spice/in_theaters/in_theaters.js",
+      "share/spice/in_theaters/rotten.png",
+      "share/spice/in_theaters/rotten.retina.png",
+      "share/spice/in_theaters/subtitle_content.handlebars"
    ]
 }

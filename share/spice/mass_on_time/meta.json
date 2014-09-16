@@ -19,6 +19,10 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/MassOnTime.pm",
-      "t/MassOnTime.t"
+      "t/MassOnTime.t",
+      "share/spice/mass_on_time/events.handlebars",
+      "share/spice/mass_on_time/mass_on_time.css",
+      "share/spice/mass_on_time/mass_on_time.js",
+      "share/spice/mass_on_time/parish.handlebars"
    ]
 }

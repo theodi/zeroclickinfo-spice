@@ -12,7 +12,8 @@
    "id" : "xkcd",
    "dev_milestone" : "live",
    "code" : [
-      "lib/DDG/Spice/Xkcd/Latest.pm",
-      "t/Xkcd.t"
+      "lib/DDG/Spice/Xkcd.pm",
+      "t/Xkcd.t",
+      "share/spice/xkcd/display"
    ]
 }

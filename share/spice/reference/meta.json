@@ -12,7 +12,7 @@
    "id" : "reference",
    "dev_milestone" : "live",
    "code" : [
-      "lib/DDG/Spice/Dictionary/Reference.pm",
+      "lib/DDG/Spice/Dictionary.pm",
       "t/Dictionary.t"
    ]
 }

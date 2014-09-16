@@ -13,6 +13,7 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Images.pm",
-      "t/Images.t"
+      "t/Images.t",
+      "share/spice/images/images.js"
    ]
 }

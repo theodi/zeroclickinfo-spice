@@ -14,6 +14,11 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Recipes.pm",
-      "t/Recipes.t"
+      "t/Recipes.t",
+      "share/spice/recipes/ingredients.txt",
+      "share/spice/recipes/recipes.css",
+      "share/spice/recipes/recipes.js",
+      "share/spice/recipes/recipes_detail.handlebars",
+      "share/spice/recipes/yummly.com.ico"
    ]
 }

@@ -18,6 +18,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/IsItUp.pm",
-      "t/IsItUp.t"
+      "t/IsItUp.t",
+      "share/spice/is_it_up/detail.handlebars",
+      "share/spice/is_it_up/is_it_up.css",
+      "share/spice/is_it_up/is_it_up.js"
    ]
 }

@@ -18,6 +18,10 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Twitter.pm",
-      "t/Twitter.t"
+      "t/Twitter.t",
+      "share/spice/twitter/content.handlebars",
+      "share/spice/twitter/testdata",
+      "share/spice/twitter/twitter.css",
+      "share/spice/twitter/twitter.js"
    ]
 }

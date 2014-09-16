@@ -18,6 +18,10 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/PeopleInSpace.pm",
-      "t/PeopleInSpace.t"
+      "t/PeopleInSpace.t",
+      "share/spice/people_in_space/content.handlebars",
+      "share/spice/people_in_space/footer.handlebars",
+      "share/spice/people_in_space/people_in_space.css",
+      "share/spice/people_in_space/people_in_space.js"
    ]
 }

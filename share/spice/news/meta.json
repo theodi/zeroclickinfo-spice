@@ -18,6 +18,7 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/News.pm",
-      "t/News.t"
+      "t/News.t",
+      "share/spice/news/news.js"
    ]
 }

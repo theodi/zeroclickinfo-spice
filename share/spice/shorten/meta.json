@@ -17,6 +17,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Shorten.pm",
-      "t/Shorten.t"
+      "t/Shorten.t",
+      "share/spice/shorten/shorten.css",
+      "share/spice/shorten/shorten.handlebars",
+      "share/spice/shorten/shorten.js"
    ]
 }

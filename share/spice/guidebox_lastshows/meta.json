@@ -12,7 +12,7 @@
    "id" : "guidebox_lastshows",
    "dev_milestone" : "live",
    "code" : [
-      "lib/DDG/Spice/Guidebox/Lastshows.pm",
+      "lib/DDG/Spice/Guidebox.pm",
       "t/Guidebox.t"
    ]
 }

@@ -12,7 +12,7 @@
    "id" : "hyphenation",
    "dev_milestone" : "live",
    "code" : [
-      "lib/DDG/Spice/Dictionary/Hyphenation.pm",
+      "lib/DDG/Spice/Dictionary.pm",
       "t/Dictionary.t"
    ]
 }

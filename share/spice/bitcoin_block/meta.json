@@ -18,6 +18,8 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/BitcoinBlock.pm",
-      "t/BitcoinBlock.t"
+      "t/BitcoinBlock.t",
+      "share/spice/bitcoin_block/bitcoin_block.css",
+      "share/spice/bitcoin_block/bitcoin_block.js"
    ]
 }

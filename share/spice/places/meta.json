@@ -12,7 +12,7 @@
    "id" : "places",
    "dev_milestone" : "live",
    "code" : [
-      "lib/DDG/Spice/Maps/Places.pm",
+      "lib/DDG/Spice/Maps.pm",
       "t/Maps.t"
    ]
 }

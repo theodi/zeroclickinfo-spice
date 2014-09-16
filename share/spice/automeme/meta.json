@@ -18,6 +18,8 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Automeme.pm",
-      "t/Automeme.t"
+      "t/Automeme.t",
+      "share/spice/automeme/automeme.js",
+      "share/spice/automeme/content.handlebars"
    ]
 }

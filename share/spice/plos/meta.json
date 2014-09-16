@@ -18,6 +18,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Plos.pm",
-      "t/Plos.t"
+      "t/Plos.t",
+      "share/spice/plos/item.handlebars",
+      "share/spice/plos/plos.css",
+      "share/spice/plos/plos.js"
    ]
 }

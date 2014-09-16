@@ -14,6 +14,8 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Hayoo.pm",
-      "t/Hayoo.t"
+      "t/Hayoo.t",
+      "share/spice/hayoo/detail.handlebars",
+      "share/spice/hayoo/hayoo.js"
    ]
 }

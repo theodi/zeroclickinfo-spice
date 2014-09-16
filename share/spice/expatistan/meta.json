@@ -14,6 +14,8 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Expatistan.pm",
-      "t/Expatistan.t"
+      "t/Expatistan.t",
+      "share/spice/expatistan/content.handlebars",
+      "share/spice/expatistan/expatistan.js"
    ]
 }

@@ -14,6 +14,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Github.pm",
-      "t/Github.t"
+      "t/Github.t",
+      "share/spice/github/footer.handlebars",
+      "share/spice/github/github.css",
+      "share/spice/github/github.js"
    ]
 }

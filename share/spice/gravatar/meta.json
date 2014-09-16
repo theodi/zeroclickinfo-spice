@@ -18,6 +18,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Gravatar.pm",
-      "t/Gravatar.t"
+      "t/Gravatar.t",
+      "share/spice/gravatar/content.handlebars",
+      "share/spice/gravatar/gravatar.css",
+      "share/spice/gravatar/gravatar.js"
    ]
 }

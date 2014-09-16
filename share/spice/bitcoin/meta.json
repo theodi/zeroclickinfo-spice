@@ -18,6 +18,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Bitcoin.pm",
-      "t/Bitcoin.t"
+      "t/Bitcoin.t",
+      "share/spice/bitcoin/bitcoin.css",
+      "share/spice/bitcoin/bitcoin.js",
+      "share/spice/bitcoin/content.handlebars"
    ]
 }

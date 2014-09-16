@@ -14,6 +14,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/CodeSearch.pm",
-      "t/CodeSearch.t"
+      "t/CodeSearch.t",
+      "share/spice/code_search/code_search.css",
+      "share/spice/code_search/code_search.js",
+      "share/spice/code_search/languages.txt"
    ]
 }

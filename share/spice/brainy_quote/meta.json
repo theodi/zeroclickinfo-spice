@@ -19,6 +19,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/BrainyQuote.pm",
-      "t/BrainyQuote.t"
+      "t/BrainyQuote.t",
+      "share/spice/brainy_quote/brainy_quote.css",
+      "share/spice/brainy_quote/brainy_quote.js",
+      "share/spice/brainy_quote/content.handlebars"
    ]
 }

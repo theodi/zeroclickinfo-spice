@@ -18,6 +18,8 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/DetectLang.pm",
-      "t/DetectLang.t"
+      "t/DetectLang.t",
+      "share/spice/detect_lang/content.handlebars",
+      "share/spice/detect_lang/detect_lang.js"
    ]
 }

@@ -18,6 +18,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/SoundCloud.pm",
-      "t/SoundCloud.t"
+      "t/SoundCloud.t",
+      "share/spice/sound_cloud/footer.handlebars",
+      "share/spice/sound_cloud/sound_cloud.css",
+      "share/spice/sound_cloud/sound_cloud.js"
    ]
 }

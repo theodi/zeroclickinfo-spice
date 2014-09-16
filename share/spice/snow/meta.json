@@ -17,6 +17,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Snow.pm",
-      "t/Snow.t"
+      "t/Snow.t",
+      "share/spice/snow/snow.css",
+      "share/spice/snow/snow.handlebars",
+      "share/spice/snow/snow.js"
    ]
 }

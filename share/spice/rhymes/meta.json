@@ -20,6 +20,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Rhymes.pm",
-      "t/Rhymes.t"
+      "t/Rhymes.t",
+      "share/spice/rhymes/content.handlebars",
+      "share/spice/rhymes/rhymes.css",
+      "share/spice/rhymes/rhymes.js"
    ]
 }

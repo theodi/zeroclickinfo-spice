@@ -14,6 +14,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/RubyGems.pm",
-      "t/RubyGems.t"
+      "t/RubyGems.t",
+      "share/spice/ruby_gems/ruby_gems.css",
+      "share/spice/ruby_gems/ruby_gems.handlebars",
+      "share/spice/ruby_gems/ruby_gems.js"
    ]
 }

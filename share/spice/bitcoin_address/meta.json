@@ -18,6 +18,8 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/BitcoinAddress.pm",
-      "t/BitcoinAddress.t"
+      "t/BitcoinAddress.t",
+      "share/spice/bitcoin_address/bitcoin_address.css",
+      "share/spice/bitcoin_address/bitcoin_address.js"
    ]
 }

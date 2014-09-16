@@ -16,6 +16,10 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Timer.pm",
-      "t/Timer.t"
+      "t/Timer.t",
+      "share/spice/timer/alarm.mp3",
+      "share/spice/timer/timer.css",
+      "share/spice/timer/timer.handlebars",
+      "share/spice/timer/timer.js"
    ]
 }

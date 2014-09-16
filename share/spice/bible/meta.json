@@ -18,6 +18,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Bible.pm",
-      "t/Bible.t"
+      "t/Bible.t",
+      "share/spice/bible/bible.js",
+      "share/spice/bible/content.handlebars",
+      "share/spice/bible/triggers.txt"
    ]
 }

@@ -18,6 +18,10 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Kwixer.pm",
-      "t/Kwixer.t"
+      "t/Kwixer.t",
+      "share/spice/kwixer/buy.handlebars",
+      "share/spice/kwixer/kwixer.css",
+      "share/spice/kwixer/kwixer.js",
+      "share/spice/kwixer/triggers.txt"
    ]
 }

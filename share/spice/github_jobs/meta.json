@@ -18,6 +18,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/GithubJobs.pm",
-      "t/GithubJobs.t"
+      "t/GithubJobs.t",
+      "share/spice/github_jobs/content.handlebars",
+      "share/spice/github_jobs/github_jobs.css",
+      "share/spice/github_jobs/github_jobs.js"
    ]
 }

@@ -19,6 +19,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/AlternativeTo.pm",
-      "t/AlternativeTo.t"
+      "t/AlternativeTo.t",
+      "share/spice/alternative_to/alternative_to.css",
+      "share/spice/alternative_to/alternative_to.js",
+      "share/spice/alternative_to/footer.handlebars"
    ]
 }

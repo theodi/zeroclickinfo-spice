@@ -17,6 +17,10 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/NJT.pm",
-      "t/NJT.t"
+      "t/NJT.t",
+      "share/spice/njt/njt.css",
+      "share/spice/njt/njt.js",
+      "share/spice/njt/stops.txt",
+      "share/spice/njt/train_item.handlebars"
    ]
 }

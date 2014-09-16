@@ -15,7 +15,7 @@
    "id" : "guidebox_getid",
    "dev_milestone" : "live",
    "code" : [
-      "lib/DDG/Spice/Guidebox/Getid.pm",
+      "lib/DDG/Spice/Guidebox.pm",
       "t/Guidebox.t"
    ]
 }

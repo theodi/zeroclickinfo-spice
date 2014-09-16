@@ -19,6 +19,7 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Videos.pm",
-      "t/Videos.t"
+      "t/Videos.t",
+      "share/spice/videos/videos.js"
    ]
 }

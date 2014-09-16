@@ -17,6 +17,8 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/ExpandURL.pm",
-      "t/ExpandURL.t"
+      "t/ExpandURL.t",
+      "share/spice/expand_url/content.handlebars",
+      "share/spice/expand_url/expand_url.js"
    ]
 }

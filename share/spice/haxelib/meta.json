@@ -14,6 +14,8 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Haxelib.pm",
-      "t/Haxelib.t"
+      "t/Haxelib.t",
+      "share/spice/haxelib/content.handlebars",
+      "share/spice/haxelib/haxelib.js"
    ]
 }

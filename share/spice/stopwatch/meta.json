@@ -16,6 +16,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Stopwatch.pm",
-      "t/Stopwatch.t"
+      "t/Stopwatch.t",
+      "share/spice/stopwatch/stopwatch.css",
+      "share/spice/stopwatch/stopwatch.handlebars",
+      "share/spice/stopwatch/stopwatch.js"
    ]
 }

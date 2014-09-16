@@ -19,6 +19,12 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Airlines.pm",
-      "t/Airlines.t"
+      "t/Airlines.t",
+      "share/spice/airlines/airlines.css",
+      "share/spice/airlines/airlines.js",
+      "share/spice/airlines/airlines.txt",
+      "share/spice/airlines/content.handlebars",
+      "share/spice/airlines/symbols.txt",
+      "share/spice/airlines/testdata.json"
    ]
 }

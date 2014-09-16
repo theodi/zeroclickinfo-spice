@@ -17,6 +17,8 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/ChuckNorris.pm",
-      "t/ChuckNorris.t"
+      "t/ChuckNorris.t",
+      "share/spice/chuck_norris/chuck_norris.js",
+      "share/spice/chuck_norris/content.handlebars"
    ]
 }

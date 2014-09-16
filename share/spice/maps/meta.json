@@ -12,7 +12,11 @@
    "id" : "maps",
    "dev_milestone" : "live",
    "code" : [
-      "lib/DDG/Spice/Maps/Maps.pm",
-      "t/Maps.t"
+      "lib/DDG/Spice/Maps.pm",
+      "t/Maps.t",
+      "share/spice/maps/chains",
+      "share/spice/maps/directions",
+      "share/spice/maps/maps",
+      "share/spice/maps/places"
    ]
 }

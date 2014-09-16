@@ -17,6 +17,7 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Bootic.pm",
-      "t/Bootic.t"
+      "t/Bootic.t",
+      "share/spice/bootic/bootic.js"
    ]
 }

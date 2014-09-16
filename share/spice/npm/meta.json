@@ -14,6 +14,8 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Npm.pm",
-      "t/Npm.t"
+      "t/Npm.t",
+      "share/spice/npm/content.handlebars",
+      "share/spice/npm/npm.js"
    ]
 }

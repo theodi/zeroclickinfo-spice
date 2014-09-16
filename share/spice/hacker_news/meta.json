@@ -15,6 +15,10 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/HackerNews.pm",
-      "t/HackerNews.t"
+      "t/HackerNews.t",
+      "share/spice/hacker_news/arrow_up.png",
+      "share/spice/hacker_news/footer.handlebars",
+      "share/spice/hacker_news/hacker_news.css",
+      "share/spice/hacker_news/hacker_news.js"
    ]
 }

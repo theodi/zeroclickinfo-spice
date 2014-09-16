@@ -12,7 +12,7 @@
    "id" : "hackage_package_details",
    "dev_milestone" : "live",
    "code" : [
-      "lib/DDG/Spice/Hackage/PackageDetails.pm",
+      "lib/DDG/Spice/Hackage.pm",
       "t/Hackage.t"
    ]
 }

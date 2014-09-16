@@ -18,6 +18,8 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/BitcoinTransaction.pm",
-      "t/BitcoinTransaction.t"
+      "t/BitcoinTransaction.t",
+      "share/spice/bitcoin_transaction/bitcoin_transaction.css",
+      "share/spice/bitcoin_transaction/bitcoin_transaction.js"
    ]
 }

@@ -17,6 +17,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/SEPTA.pm",
-      "t/SEPTA.t"
+      "t/SEPTA.t",
+      "share/spice/septa/content.handlebars",
+      "share/spice/septa/septa.css",
+      "share/spice/septa/septa.js"
    ]
 }

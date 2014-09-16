@@ -12,7 +12,7 @@
    "id" : "audio",
    "dev_milestone" : "live",
    "code" : [
-      "lib/DDG/Spice/Dictionary/Audio.pm",
+      "lib/DDG/Spice/Dictionary.pm",
       "t/Dictionary.t"
    ]
 }

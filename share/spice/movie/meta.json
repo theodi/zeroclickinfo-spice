@@ -19,6 +19,16 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/Movie.pm",
-      "t/Movie.t"
+      "t/Movie.t",
+      "share/spice/movie/buy.handlebars",
+      "share/spice/movie/certified-fresh.png",
+      "share/spice/movie/certified-fresh.retina.png",
+      "share/spice/movie/fresh.png",
+      "share/spice/movie/fresh.retina.png",
+      "share/spice/movie/movie.css",
+      "share/spice/movie/movie.js",
+      "share/spice/movie/rotten.png",
+      "share/spice/movie/rotten.retina.png",
+      "share/spice/movie/subtitle_content.handlebars"
    ]
 }

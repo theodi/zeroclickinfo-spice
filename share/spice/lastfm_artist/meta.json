@@ -20,7 +20,7 @@
    "id" : "lastfm_artist",
    "dev_milestone" : "live",
    "code" : [
-      "lib/DDG/Spice/Lastfm/Artist.pm",
+      "lib/DDG/Spice/Lastfm.pm",
       "t/Lastfm.t"
    ]
 }

@@ -18,6 +18,8 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/UrbanDictionary.pm",
-      "t/UrbanDictionary.t"
+      "t/UrbanDictionary.t",
+      "share/spice/urban_dictionary/content.handlebars",
+      "share/spice/urban_dictionary/urban_dictionary.js"
    ]
 }

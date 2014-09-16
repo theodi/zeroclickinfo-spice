@@ -18,6 +18,8 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/WordMap.pm",
-      "t/WordMap.t"
+      "t/WordMap.t",
+      "share/spice/word_map/content.handlebars",
+      "share/spice/word_map/word_map.js"
    ]
 }

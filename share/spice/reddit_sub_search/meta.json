@@ -18,6 +18,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/RedditSubSearch.pm",
-      "t/RedditSubSearch.t"
+      "t/RedditSubSearch.t",
+      "share/spice/reddit_sub_search/detail.handlebars",
+      "share/spice/reddit_sub_search/reddit_sub_search.handlebars",
+      "share/spice/reddit_sub_search/reddit_sub_search.js"
    ]
 }

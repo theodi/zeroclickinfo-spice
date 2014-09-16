@@ -13,7 +13,7 @@
    "id" : "hackage_packages",
    "dev_milestone" : "live",
    "code" : [
-      "lib/DDG/Spice/Hackage/Packages.pm",
+      "lib/DDG/Spice/Hackage.pm",
       "t/Hackage.t"
    ]
 }

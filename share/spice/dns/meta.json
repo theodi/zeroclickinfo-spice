@@ -17,6 +17,9 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/DNS.pm",
-      "t/DNS.t"
+      "t/DNS.t",
+      "share/spice/dns/content.handlebars",
+      "share/spice/dns/dns.css",
+      "share/spice/dns/dns.js"
    ]
 }

@@ -15,6 +15,10 @@
    "dev_milestone" : "live",
    "code" : [
       "lib/DDG/Spice/GooglePlus.pm",
-      "t/GooglePlus.t"
+      "t/GooglePlus.t",
+      "share/spice/google_plus/content.handlebars",
+      "share/spice/google_plus/google_plus.css",
+      "share/spice/google_plus/google_plus.js",
+      "share/spice/google_plus/triggers.txt"
    ]
 }
