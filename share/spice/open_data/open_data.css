@@ -1,0 +1,24 @@
+.tile--open_data .tile__icon {
+    float: right;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+.tile--open_data .tile__body {
+    height: 13em;
+}
+
+.tile--open_data .tile__content {
+    height: 6em;
+}
+
+.is-mobile .tile--open_data .tile__content {
+    height: 6.8em;
+}
+
+.tile--open_data .tile__footer {
+    height: auto;
+    margin-bottom: 0;
+    color: #aaa;
+    line-height: 1em;
+}
